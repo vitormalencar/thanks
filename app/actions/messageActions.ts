@@ -44,7 +44,6 @@ export async function getMessages(): Promise<Message[]> {
       FROM messages
       ORDER BY id DESC;
     `;
-
     return rows;
   } catch (error) {
     console.error("Error fetching messages:", error);
