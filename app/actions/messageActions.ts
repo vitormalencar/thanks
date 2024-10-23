@@ -39,7 +39,7 @@ export async function addMessage(
  */
 export async function getMessages(): Promise<Message[]> {
   try {
-    const { rows } = await sql<Message>`
+    const { rows } = await sql<Message[]>`
       SELECT id, name, message, image
       FROM messages
       ORDER BY id DESC;
