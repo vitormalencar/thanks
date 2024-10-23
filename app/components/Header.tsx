@@ -1,5 +1,8 @@
-import { GitHubLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons'
-
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 
 export default function Header() {
   return (
@@ -13,7 +16,8 @@ export default function Header() {
         <div>
           <h1 className="text-4xl font-bold mb-2">Thank You!</h1>
           <p className="text-xl text-gray-600 mb-4">
-            It's been an amazing journey. Thank you all for your support and friendship.
+            it was been an amazing journey. Thank you all for your support and
+            friendship.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-gray-600 hover:text-primary">
@@ -29,5 +33,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
