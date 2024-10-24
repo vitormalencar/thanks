@@ -21,13 +21,22 @@ export default function Header() {
             everything!
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a
+              href="https://github.com/vitormalencar/dotfiles"
+              className="text-gray-600 hover:text-primary"
+            >
               <GitHubLogoIcon />
             </a>
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a
+              href="https://x.com/VitorMalencar"
+              className="text-gray-600 hover:text-primary"
+            >
               <TwitterLogoIcon />
             </a>
-            <a href="#" className="text-gray-600 hover:text-primary">
+            <a
+              href="https://www.linkedin.com/in/vitormalencar"
+              className="text-gray-600 hover:text-primary"
+            >
               <LinkedInLogoIcon />
             </a>
           </div>
