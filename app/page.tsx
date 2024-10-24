@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-100 bg-grid-pattern">
+    <div className="min-full bg-gray-200 bg-grid-pattern">
       <Header />
 
       <MessageForm />

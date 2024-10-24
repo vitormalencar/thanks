@@ -27,7 +27,7 @@ export default function MessageForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Convert the image to a base64 string
+
     let imageBase64: string | undefined = undefined;
 
     if (image) {
