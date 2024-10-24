@@ -26,6 +26,14 @@ export const metadata: Metadata = {
       "A heartfelt thank you page for Vitor Alencar where friends and colleagues can leave goodbye notes and express their gratitude.",
     url: "https://thanks-vitor.vercel.app/",
     siteName: "Vitor Alencar's Farewell Page",
+    images: [
+      {
+        url: "https://thanks-vitor.vercel.app/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Thank You Image for Vitor Alencar",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -34,6 +42,7 @@ export const metadata: Metadata = {
     title: "Thank You, Vitor Alencar!",
     description:
       "A heartfelt thank you page for Vitor Alencar where friends and colleagues can leave goodbye notes and express their gratitude.",
+    images: ["https://thanks-vitor.vercel.app/og.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -49,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
