@@ -50,3 +50,23 @@ export async function getMessages(): Promise<Message[]> {
     return [];
   }
 }
+
+/**
+ * Deletes a message from the database by its ID.
+ * @param id - The ID of the message to delete.
+ * @returns An object indicating success or failure.
+ */
+export async function deleteMessage(
+  id: number
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    await sql`
+      DELETE FROM messages
+      WHERE id = ${id};
+    `;
+    return { success: true };
+  } catch (error: any) {
+    console.error(`Error deleting message with ID ${id}:`, error);
+    return { success: false, error: error.message };
+  }
+}
