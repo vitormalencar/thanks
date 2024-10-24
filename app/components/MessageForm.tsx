@@ -50,9 +50,9 @@ export default function MessageForm() {
       setName("");
       setMessage("");
       setImage(null);
-      setIsDialogOpen(false); // Close the dialog upon success
+      setIsDialogOpen(false);
       setIsSubmitting(false);
-      router.refresh(); // Refresh the page to show the new message
+      router.refresh();
     } else {
       setIsSubmitting(false);
       alert(`Error: ${result.error}`);
@@ -60,51 +60,53 @@ export default function MessageForm() {
   };
 
   return (
-    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-      <DialogTrigger asChild>
-        <Button className="fixed bottom-8 right-8 rounded-full w-16 h-16 shadow-lg">
-          <PlusCircle size={32} />
-        </Button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Add a Goodbye Message</DialogTitle>
-        </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <Label htmlFor="name">Name</Label>
-            <Input
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <Label htmlFor="message">Message</Label>
-            <div className="relative">
-              <Textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+    <div className="fixed bottom-8 right-8 z-50">
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogTrigger asChild>
+          <Button className="fixed bottom-8 right-8 rounded-full w-16 h-16 shadow-lg">
+            <PlusCircle size={32} />
+          </Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Add a Goodbye Message</DialogTitle>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <Label htmlFor="name">Name</Label>
+              <Input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
-          </div>
-          <div>
-            <Label htmlFor="image">Image (optional)</Label>
-            <Input
-              id="image"
-              type="file"
-              accept="image/*"
-              onChange={(e) => setImage(e.target.files?.[0] || null)}
-            />
-          </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Adding..." : "Add Message"}
-          </Button>
-        </form>
-      </DialogContent>
-    </Dialog>
+            <div>
+              <Label htmlFor="message">Message</Label>
+              <div className="relative">
+                <Textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <Label htmlFor="image">Image (optional)</Label>
+              <Input
+                id="image"
+                type="file"
+                accept="image/*"
+                onChange={(e) => setImage(e.target.files?.[0] || null)}
+              />
+            </div>
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Adding..." : "Add Message"}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }

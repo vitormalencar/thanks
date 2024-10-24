@@ -14,10 +14,10 @@ export default function Header() {
           className="rounded-full w-32 h-32 object-cover border-4 border-primary"
         />
         <div>
-          <h1 className="text-4xl font-bold mb-2">Thank You!</h1>
+          <h1 className="text-4xl font-bold mb-2">Thank You ! 💚</h1>
           <p className="text-xl text-gray-600 mb-4">
-            it was been an amazing journey. Thank you all for your support and
-            friendship.
+            Hey everyone 👋, I was a incredible jorney im quite happy and proud
+            of we acomplish, I will miss everyone, thanks for everything!
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-gray-600 hover:text-primary">
