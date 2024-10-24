@@ -63,8 +63,9 @@ export default function MessageForm() {
     <div className="fixed bottom-8 right-8 z-50">
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogTrigger asChild>
-          <Button className="fixed bottom-8 right-8 rounded-full w-16 h-16 shadow-lg">
+          <Button className="text-xl fixed bottom-8 right-8 rounded-full shadow-lg">
             <PlusCircle size={32} />
+            Add message
           </Button>
         </DialogTrigger>
         <DialogContent>
